@@ -11,20 +11,20 @@ addToCartButtons.forEach(button => {
         const productName = button.getAttribute('data-name');
         const productPrice = parseInt(button.getAttribute('data-price'));
 
-        // Додаємо товар до кошика
+       
         const product = { id: productId, name: productName, price: productPrice };
         cart.push(product);
 
-        // Оновлюємо відображення кошика
+      
         updateCart();
     });
 });
 
 function updateCart() {
-    // Оновлюємо кількість товарів у кошику
+    
     cartCount.textContent = cart.length;
 
-    // Оновлюємо список товарів в кошику
+    
     cartItemsList.innerHTML = '';
     cart.forEach(item => {
         const li = document.createElement('li');
@@ -32,7 +32,7 @@ function updateCart() {
         cartItemsList.appendChild(li);
     });
 
-    // Оновлюємо загальну суму
+    
     const total = cart.reduce((sum, item) => sum + item.price, 0);
     totalPrice.textContent = total;
 }
