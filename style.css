@@ -1,101 +1,147 @@
-/* Встановлюємо базовий стиль */
+/* Загальні стилі */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #F2F0E6; /* Світло-коричневий */
+    color: #3E2C1C; /* Темно-коричневий */
 }
 
-header {
-    background-color: #8B0000;
-    padding: 20px;
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #D4AF37; /* Золотий */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    background-color: #D4AF37; /* Золотий */
     color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-.container {
-    width: 90%;
-    margin: 0 auto;
+button:hover {
+    background-color: #b88c29;
+}
+
+/* Header */
+header {
+    background-color: #3E2C1C; /* Темно-коричневий */
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-h1 {
-    font-size: 2.5rem;
+header .logo h1 {
+    color: #D4AF37; /* Золотий */
+    font-size: 2rem;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-}
-
-main {
-    padding: 40px 0;
-}
-
-#catalog {
-    margin-bottom: 40px;
-}
-
-.product-list {
+nav ul {
+    list-style-type: none;
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
 }
 
-.product-card {
-    background-color: white;
-    border-radius: 8px;
-    padding: 20px;
-    width: 200px;
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #F2F0E6; /* Білий */
+    font-size: 1rem;
+}
+
+/* Банер */
+.banner {
+    background-image: url('wine-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.product-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-button {
-    background-color: #8B0000;
     color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
-button:hover {
-    background-color: #B22222;
+.banner h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
 }
 
-#cart {
+.banner button a {
+    color: white;
+}
+
+/* Каталог */
+.catalog {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.catalog .product {
+    display: inline-block;
+    margin: 20px;
+    width: 250px;
     background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#cart-items {
-    list-style: none;
-    padding: 0;
+.catalog .product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
-#cart-items li {
-    margin-bottom: 10px;
+.catalog .product h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
 }
 
+.catalog .product p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.catalog .product .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #D4AF37;
+}
+
+/* Футер */
 footer {
-    background-color: #8B0000;
+    background-color: #3E2C1C; /* Темно-коричневий */
+    padding: 20px;
     color: white;
     text-align: center;
-    padding: 20px 0;
+}
+
+footer ul {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: #F2F0E6;
 }
