@@ -3,57 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VinoKraft - Продаж вина</title>
-    <!-- Вказуємо відносний шлях до стилів -->
-    <link rel="stylesheet" href="css/styles.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Вино - Каталог</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Головне меню -->
     <header>
-        <div class="container">
-            <h1>VinoKraft</h1>
-            <nav>
-                <a href="#catalog">Каталог</a>
-                <a href="#cart">Кошик <span id="cart-count">0</span></a>
-            </nav>
+        <div class="logo">
+            <h1>Вино<strong>Магія</strong></h1>
         </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Головна</a></li>
+                <li><a href="#catalog">Каталог</a></li>
+                <li><a href="#about">Про нас</a></li>
+                <li><a href="#contact">Контакти</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <section id="catalog">
-            <h2>Наш каталог вин</h2>
-            <div class="product-list">
-                <!-- Товари -->
-                <div class="product-card">
-                    <img src="images/wine1.jpg" alt="Вино 1">
-                    <h3>Вино 1</h3>
-                    <p>Ціна: 300 грн</p>
-                    <button class="add-to-cart" data-product="1" data-name="Вино 1" data-price="300">Додати в кошик</button>
-                </div>
-                <div class="product-card">
-                    <img src="images/wine2.jpg" alt="Вино 2">
-                    <h3>Вино 2</h3>
-                    <p>Ціна: 350 грн</p>
-                    <button class="add-to-cart" data-product="2" data-name="Вино 2" data-price="350">Додати в кошик</button>
-                </div>
-                <!-- Додайте ще 8 вин -->
-            </div>
-        </section>
+    <!-- Головний банер -->
+    <section id="home" class="banner">
+        <h2>Смак розкоші в кожній краплі</h2>
+        <button><a href="#catalog">Переглянути Каталог</a></button>
+    </section>
 
-        <section id="cart">
-            <h2>Ваш кошик</h2>
-            <ul id="cart-items"></ul>
-            <p>Загальна сума: <span id="total-price">0</span> грн</p>
-            <button id="checkout">Оформити замовлення</button>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 VinoKraft. Всі права захищені.</p>
+    <!-- Каталог -->
+    <section id="catalog" class="catalog">
+        <h2>Наші вина</h2>
+        <div class="product">
+            <img src="red-wine.jpg" alt="Червоне вино">
+            <h3>Червоне Вино</h3>
+            <p>Вино з виноградників Італії. Вишуканий смак з нотками спецій.</p>
+            <span class="price">₴500</span>
+            <button>Додати в кошик</button>
         </div>
-    </footer>
+        <div class="product">
+            <img src="white-wine.jpg" alt="Біле вино">
+            <h3>Біле Вино</h3>
+            <p>Легке і свіженьке вино, яке ідеально підходить для літніх вечорів.</p>
+            <span class="price">₴450</span>
+            <button>Додати в кошик</button>
+        </div>
+        <div class="product">
+            <img src="sparkling-wine.jpg" alt="Ігристе вино">
+            <h3>Ігристе Вино</h3>
+            <p>Ідеально підходить для святкових моментів, з балончиком для пінної свіжості.</p>
+            <span class="price">₴750</span>
+            <button>Додати в кошик</button>
+        </div>
+    </section>
 
-    <!-- Вказуємо відносний шлях до JS файлу -->
-    <script src="js/script.js"></script>
+    <!-- Футер -->
+    <footer>
+        <p>&copy; 2024 ВиноМагія | Всі права захищені</p>
+        <ul>
+            <li><a href="#">Політика конфіденційності</a></li>
+            <li><a href="#">Умови використання</a></li>
+            <li><a href="#">Контакти</a></li>
+        </ul>
+    </footer>
 </body>
 </html>
